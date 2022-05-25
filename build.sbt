@@ -1,4 +1,4 @@
-name := "Tech-test"
+name := "Pdm-cleaning-data"
 
 version := "0.1"
 

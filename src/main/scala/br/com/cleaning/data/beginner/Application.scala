@@ -1,4 +1,4 @@
-package org.shape.com.test
+package br.com.cleaning.data.beginner
 
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
@@ -11,7 +11,7 @@ object Application {
 
     Logger.getLogger("org").setLevel(Level.ERROR)
 
-    // Building a SparkSession on the local machine
+    // Building a SparkSession at the local machine
     val spark = SparkSession
       .builder
       .appName("SparkSQL")
@@ -61,6 +61,7 @@ object Application {
     // Average of the errors by group of equipments, ordered by the number of failures
     val dfAvgFailures = dfGroupOfEquipments.groupBy("group_name").agg(avg("count").alias("avg_failures"))
       .orderBy(col("avg_failures"))
+
 
 
 
